@@ -42,6 +42,7 @@ public class MemberController {
 	// login - 페이지 이동
 	
 	// signIn - 비즈니스 로직 포함 : 파라미터 값 -> HttpServletRequest request
+	// -> return "login_result"
 	
 	// allMember - 비즈니스 로직 포함, 데이터바인딩 - Model
 	// --> return "find-ok";
