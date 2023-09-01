@@ -38,8 +38,8 @@ public class BoardService {
 	public int deleteBoard(int no) {
 		return dao.deleteBoard(no);
 	}
-	
 }
+
 
 
 
