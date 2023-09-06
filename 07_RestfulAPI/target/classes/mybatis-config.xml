@@ -6,7 +6,7 @@
 	</settings>
 	
 	<typeAliases>
-		<package name="com.kh.api.model" />
+		<package name="com.kh.api.model"/>
 	</typeAliases>
 	
 	<mappers>

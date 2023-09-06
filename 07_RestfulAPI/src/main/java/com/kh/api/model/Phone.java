@@ -12,6 +12,6 @@ public class Phone {
 	private String num;
 	private String model;
 	private int price;
-	private Company company;
-	
+	private String vcode;
+    private Company company;
 }

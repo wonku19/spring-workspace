@@ -6,25 +6,29 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.kh.api.model.Greeting;
 
+
+
 @RestController
 public class GreetingController {
-
-	// http://localhost8080/api/greet --> selectList
+	
+	// http://localhost:8080/api/greet - > selectList
 	@GetMapping("/greet")
 	public Greeting sayGreet() {
 		return new Greeting(314L, "Restful API");
 	}
 	
-	// http://localhost8080/board/view?no=23 (X)
-	// -> http://localhost:8080/board/23 --> selectOne
+	// http://localhost:8080/board/view?no=23
+	// --> http://localhost:8080/board/23 --> select one 
+	
 	@GetMapping("/greet/{id}")
-	public String showSample(@PathVariable int id) { // PathVariable : URL 경로의 일부를 파라미터로 사용할 때
-		return "Hello REST API case number.." + id;		
+	public String showSample(@PathVariable int id) { //PathVariable : URL 경로의 일부를 파라미터로 사용할 때
+		return "Hello REST API case number.." + id;
 	}
 	
-	// http://localhost8080/search?keyword=키워드
+	// http://localhost:8080/search?keyword=키워드
 	@GetMapping("/greet2")
 	public Greeting sayGreet2(String content) {
-		return new Greeting(500L, content);
+		return new Greeting(500L, content);		
 	}
+	
 }

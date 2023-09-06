@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="phone">
-	<insert id="insert"></insert>
+
+	<insert id="insert" parameterType="Phone">
+		insert into phone(num,model,price,vcode)
+		values(#{num},#{model},#{price},#{vcode})
+	</insert>
 	
-	<!-- Dynamic Query : selectAll + selectOne (num) -->
-	<select id="select"></select>
+	<resultMap type="phone" id="phoneWithCompany">
+		<id column="num" property="num" />
+		<result column="model" property="model"/>
+		<result column="price" property="price"/>
+		<result column="vcode" property="vcode"/>
+		<association property="company" javaType="company">
+			<id column="vcode" property="vcode"/>
+			<result column="vendor" property="vendor"/>
+		</association>	
+	</resultMap>
+
+	<!-- Dynamic Query : selectAll(전체목록 출력) + selectOne(num) num대입시 1개의 목록 출력 -->
+	<select id="select" resultMap="phoneWithCompany" parameterType="String">
+			SELECT num, model, price, vcode, vendor 
+			FROM phone 
+			JOIN company USING(vcode)
+			<if test="num!=null">
+				WHERE num=#{num}
+			</if>
+	</select>
 	
-	<delete id="delete"></delete>
-	
-	<update id="update"></update>
-	
-	<!-- Dynamic Query : id와 pw 둘다 입력했을때랑 id만 입력했을때 -->
-	<select id="selectUser"></select>
-	
+	<delete id="delete" parameterType="String">
+		DELETE FROM phone
+		WHERE num=#{num}
+	</delete>
+
+	<update id="update" parameterType="Phone">
+		UPDATE PHONE
+		SET model=#{model},price=#{price}, vcode=#{vcode}
+		where num=#{num}
+	</update>
+
+
+	<!-- Dynamic Query : id와 pw 둘다 입력했을때, id만 입력했을때 -->
+	<select id="selectUser" parameterType="userinfo" resultType="userinfo">
+	select id,pw
+	from userinfo
+	where id=#{id}
+	<if test="pw!=null">
+		AND pw=#{pw}
+	</if>
+	</select>
 </mapper>

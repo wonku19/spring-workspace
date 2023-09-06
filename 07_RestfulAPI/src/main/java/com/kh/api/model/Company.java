@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Company {
-
 	private String vcode;
 	private String vendor;
-	
 }
