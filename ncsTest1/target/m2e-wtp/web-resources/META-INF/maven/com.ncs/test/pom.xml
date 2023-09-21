@@ -84,106 +84,106 @@
 			<scope>runtime</scope>
 		</dependency>
 
-<dependencies>
-    <!-- Spring Framework -->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-context</artifactId>
-        <version>5.2.3.RELEASE</version>
-    </dependency>
-    
-    <!-- Spring JDBC -->
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-jdbc</artifactId>
-        <version>5.2.3.RELEASE</version>
-    </dependency>
-    
-    <!-- Oracle JDBC Driver -->
-    <dependency>
-        <groupId>com.oracle.database.jdbc</groupId>
-        <artifactId>ojdbc6</artifactId>
-        <version>11.2.0.3</version>
-    </dependency>
+		<dependencies>
+			<!-- Spring Framework -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>5.2.3.RELEASE</version>
+			</dependency>
 
-    <!-- MyBatis -->
-    <dependency>
-        <groupId>org.mybatis</groupId>
-        <artifactId>mybatis</artifactId>
-        <version>3.5.4</version>
-    </dependency>
+			<!-- Spring JDBC -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>5.2.3.RELEASE</version>
+			</dependency>
 
-    <!-- MyBatis Spring Integration -->
-    <dependency>
-        <groupId>org.mybatis</groupId>
-        <artifactId>mybatis-spring</artifactId>
-        <version>2.0.3</version>
-    </dependency>
+			<!-- Oracle JDBC Driver -->
+			<dependency>
+				<groupId>com.oracle.database.jdbc</groupId>
+				<artifactId>ojdbc6</artifactId>
+				<version>11.2.0.3</version>
+			</dependency>
 
-    <!-- Commons DBCP -->
-    <dependency>
-        <groupId>commons-dbcp</groupId>
-        <artifactId>commons-dbcp</artifactId>
-        <version>1.4</version>
-    </dependency>
+			<!-- MyBatis -->
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>3.5.4</version>
+			</dependency>
 
-    <!-- JSTL -->
-    <dependency>
-        <groupId>javax.servlet.jsp</groupId>
-        <artifactId>javax.servlet.jsp-api</artifactId>
-        <version>2.3.3</version>
-    </dependency>
-    <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>javax.servlet-api</artifactId>
-        <version>4.0.1</version>
-    </dependency>
-    <dependency>
-        <groupId>javax.servlet.jsp.jstl</groupId>
-        <artifactId>javax.servlet.jsp.jstl-api</artifactId>
-        <version>1.2.1</version>
-    </dependency>
-    <dependency>
-        <groupId>taglibs</groupId>
-        <artifactId>standard</artifactId>
-        <version>1.1.2</version>
-    </dependency>
-</dependencies>
+			<!-- MyBatis Spring Integration -->
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>2.0.3</version>
+			</dependency>
 
-	<!-- @Inject -->
-	<dependency>
-		<groupId>javax.inject</groupId>
-		<artifactId>javax.inject</artifactId>
-		<version>1</version>
-	</dependency>
+			<!-- Commons DBCP -->
+			<dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>1.4</version>
+			</dependency>
 
-	<!-- Servlet -->
-	<dependency>
-		<groupId>javax.servlet</groupId>
-		<artifactId>servlet-api</artifactId>
-		<version>2.5</version>
-		<scope>provided</scope>
-	</dependency>
-	<dependency>
-		<groupId>javax.servlet.jsp</groupId>
-		<artifactId>jsp-api</artifactId>
-		<version>2.1</version>
-		<scope>provided</scope>
-	</dependency>
-	<dependency>
-		<groupId>javax.servlet</groupId>
-		<artifactId>jstl</artifactId>
-		<version>1.2</version>
-	</dependency>
+			<!-- JSTL -->
+			<dependency>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>javax.servlet.jsp-api</artifactId>
+				<version>2.3.3</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>4.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet.jsp.jstl</groupId>
+				<artifactId>javax.servlet.jsp.jstl-api</artifactId>
+				<version>1.2.1</version>
+			</dependency>
+			<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
+			</dependency>
+		</dependencies>
 
-	<!-- Test -->
-	<dependency>
-		<groupId>junit</groupId>
-		<artifactId>junit</artifactId>
-		<version>4.7</version>
-		<scope>test</scope>
-	</dependency>
-</dependencies>
+		<!-- @Inject -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+
+		<!-- Servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
